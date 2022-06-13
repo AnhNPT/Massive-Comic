@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reading</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/dark.min.css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+        <div class="loader"></div>
+    </div> -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.svg" alt="" class="logo">
+                            <img src="img/logo_res.svg" alt="" class="logo_responsive">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li class="active"><a>Trang chủ</a></li>
+                                <li><a href="categories.html" style="cursor:default">Thể loại
+                                        <span class="arrow_carrot-down dropdown-icon"></span>
+                                    </a>
+                                    <ul class="dropdown">
+                                        <div id="displayCategoryOnHeader">
+                                            <ul class="multi_column_dropdowmn">
+                                            </ul>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li id="history"><a href="/history.html" id="history-btn">Lịch sử</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="search-bar row align-items-center">
+                            <div class="search-box me-1">
+                                <input type="text" name="search-input" id="search-content" style="width: 100%;"
+                                    class="input-search fs-8 fw-bolder" placeholder="Bạn cần tìm gì?">
+                            </div>
+                            <div class="search-submit">
+                                <button type="button" class="abc search-icon ms-5" id="search-icon">
+                                    <i class="fa fa-search" style="color: white; height: 23px;"></i>
+                                </button>
+                            </div>
+                            <div>
+                                <a href="login.html" id="indexViewButtonLogin"><span
+                                        class="icon_profile ms-4"></span></a>
+                                <div class="avatar position-relative ms-4" id="indexViewUserDetail"
+                                    style="display: none;">
+                                    <img src="" alt="avatar" class="avatar-img" id="avatar-sidebar">
+                                    <ul class="avatar-sidebar-list position-absolute unstyled" id="sideBarList">
+                                        <li>
+                                            <a href="/profile_info.html">
+                                                <i class="fa fa-user me-2" aria-hidden="true"></i>
+                                                <span class="fs-6">Tài khoản</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a onclick="logout()">
+                                                <i class="fa fa-sign-out me-2" aria-hidden="true"></i>
+                                                <span class="fs-6">Đăng xuất</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-bar-responsive row align-items-center justify-content-center">
+                <div class="search-box-responsive me-1 my-4">
+                    <input type="text" name="search-input" id="search-content-responsive" style="width: 100%;"
+                        class="input-search fs-8 fw-bolder" placeholder="Bạn cần tìm gì?">
+                </div>
+                <div class="search-submit-responsive">
+                    <button type="button" class="abc search-icon-responsive ms-5" id="search-icon-responsive">
+                        <i class="fa fa-search" style="color: white; height: 23px;"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links" id="breadcrumb-in-reading">
+                        <a href="./index.html"><i class="fa fa-home"></i>Trang chủ</a>
+                        <a href="#">Làm sao để trốn thoát khỏi dàn hậu cung</a>
+                        <span>Chapter 353</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Sticky Sidebar Begin -->
+    <div class="navbar-cstm d-flex flex-row justify-content-center p-1" id="sticky-sidebar" style="z-index: 5;">
+        <a href="/index.html" class="back-to-home">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </a>
+        <a href="" id="previous-chap"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        <div class="d-flex flex-row">
+            <select class="chapter-list" id="chaps">
+                <option selected value="1">Chapter 1</option>
+            </select>
+        </div>
+        <a href="" id="next-chap"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+    </div>
+    <!-- Sticky Sidebar End -->
+
+    <!-- Main Section Begin -->
+    <section class="comic-details spad" style="padding-bottom: 50px;">
+        <div class="container">
+            <div class="row d-flex justify-content-center" id="readingSection">
+                <div class="col-lg-8">
+                    <div class="comic-title d-flex flex-column">
+                        <h3 class="mb-4 fw-bolder" style="color: whitesmoke;">Làm sao để trốn thoát khỏi dàn hậu cung
+                        </h3>
+                        <span class="current-chapter fw-bolder" style="color: whitesmoke;">Chapter 321</span>
+                        <span class="mt-4" style="color: whitesmoke;">Cập nhật lần cuồi vào 08/11/2021</span>
+                    </div>
+                </div>
+                <div class="col-lg-12" style="padding-left: 0; padding-right: 0;">
+                    <div class="d-flex flex-column align-items-center reading-details-pic">
+                        <div id="comicPage">
+                            <img src="" alt="" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="comicCommentSection">
+            </div>
+        </div>
+    </section>
+    <!-- Main Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p style="color: aliceblue;">Mọi thông tin và hình ảnh trên website đều được sưu tầm trên Internet.
+                        Chúng tôi không sở hữu hay chịu trách nhiệm bất kỳ thông tin nào trên web này. Nếu làm ảnh hưởng
+                        đến cá nhân hay tổ chức nào, khi được yêu cầu, chúng tôi sẽ xem xét và gỡ bỏ ngay lập tức.</p>
+                </div>
+            </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lozad"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/function.js"></script>
+
+</body>
+
+</html>

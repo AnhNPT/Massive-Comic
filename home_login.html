@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nekoa</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/dark.min.css">
+    <link rel="stylesheet" href="css/splide.min.css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="/img/logo.svg" alt="" class="logo">
+                            <img src="/img/logo_res.svg" alt="" class="logo_responsive">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li class="active"><a href="./index.html">Trang chủ</a></li>
+                                <li><a style="cursor:default">Thể loại
+                                        <span class="arrow_carrot-down dropdown-icon"></span>
+                                    </a>
+                                    <ul class="dropdown">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <ul class="multi_column_dropdowmn">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Adult</a></li>
+                                                    <li><a href="#">Adventure</a></li>
+                                                    <li><a href="#">Anime</a></li>
+                                                    <li><a href="#">Comedy</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <ul class="multi_column_dropdowmn">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Adult</a></li>
+                                                    <li><a href="#">Adventure</a></li>
+                                                    <li><a href="#">Anime</a></li>
+                                                    <li><a href="#">Comedy</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <ul class="multi_column_dropdowmn">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Adult</a></li>
+                                                    <li><a href="#">Adventure</a></li>
+                                                    <li><a href="#">Anime</a></li>
+                                                    <li><a href="#">Comedy</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li id="history"><a href="history.html">Lịch sử</a></li>
+                                <li id="follow"><a href="following_comic.html">Theo dõi</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right d-flex justify-content-end align-items-center">
+                        <div class="search-bar row align-items-center">
+                            <div class="search-box me-1">
+                                <input type="text" name="search-input" id="" style="width: 100%;"
+                                    class="input-search fs-8 fw-bolder" placeholder="Bạn cần tìm gì?">
+                            </div>
+                            <div class="search-submit">
+                                <button type="button" class="abc search-icon ms-5">
+                                    <i class="fa fa-search" style="color: white; height: 23px;"></i>
+                                </button>
+                            </div>
+                            <div class="avatar position-relative ms-4">
+                                <img src="" alt="avatar" class="avatar-img" id="avatar-sidebar">
+                                <ul class="avatar-sidebar-list position-absolute unstyled" id="sideBarList">
+                                    <li>
+                                        <a href="/profile_info.html">
+                                            <i class="fa fa-user me-2" aria-hidden="true"></i>
+                                            <span class="fs-6">Tài khoản</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-unlock-alt me-2" aria-hidden="true"></i>
+                                            <span class="fs-6">Khôi phục mật khẩu</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-sign-out me-2" aria-hidden="true"></i>
+                                            <span class="fs-6">Đăng xuất</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-bar-responsive row align-items-center justify-content-center">
+                <div class="search-box-responsive me-1 my-4">
+                    <input type="text" name="search-input" id="" style="width: 100%;"
+                        class="input-search fs-8 fw-bolder" placeholder="Bạn cần tìm gì?">
+                </div>
+                <div class="search-submit-responsive">
+                    <button type="button" class="abc search-icon-responsive ms-5">
+                        <i class="fa fa-search" style="color: white; height: 23px;"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Carousel Section Begin -->
+    <section class="container splide mt-6 comic-slider" aria-label="splide-comic">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide position-relative" style="width: 150px; height: 150px;">
+                    <a href=""><img src="/img/2.jpg" alt="">
+                    </a>
+                    <div class="slide-caption position-absolute px-3">
+                        <span class="fs-bold fs-7">
+                            <a href="#">
+                                Spy X Family
+                            </a>
+                            <span class="fs-8">
+                                Chapter 60
+                            </span>
+                        </span>
+                    </div>
+                </li>
+                <li class="splide__slide position-relative" style="width: 150px; height: 150px;">
+                    <a href="/details.html"><img src="/img/Kurasu-no-Daikiraina-Joshi-to-Kekkon-Suru-Koto-ni-Natta.jpg" alt="">
+                    </a>
+                    <div class="slide-caption position-absolute px-3">
+                        <span class="fs-bold fs-7">
+                            <a href="#">
+                                Kurasu-no-Daikiraina-Joshi-to-Kekkon-Suru-Koto-ni-Natta
+                            </a>
+                            <span class="fs-8">
+                                Chapter 12
+                            </span>
+                        </span>
+                    </div>
+                </li>
+                <li class="splide__slide position-relative" style="width: 150px; height: 150px;">
+                    <a href=""><img src="/img/imager_7422.jpg" alt="">
+                    </a>
+                    <div class="slide-caption position-absolute px-3">
+                        <span class="fs-bold fs-7">
+                            <a href="#">
+                                Hyouka
+                            </a>
+                            <span class="fs-8">
+                                Chapter 42
+                            </span>
+                        </span>
+                    </div>
+                </li>
+                <li class="splide__slide position-relative" style="width: 150px; height: 150px;">
+                    <a href=""><img src="/img/Chitose-kun_wa_Ramune_Bin_no_Naka_bìa_vol_1.jpg" alt="">
+                    </a>
+                    <div class="slide-caption position-absolute px-3">
+                        <span class="fs-bold fs-7">
+                            <a href="#">
+                                Chitose kun wa Ramune Bin no Naka
+                            </a>
+                            <span class="fs-8">
+                                Chapter 2
+                            </span>
+                        </span>
+                    </div>
+                </li>
+                <li class="splide__slide position-relative" style="width: 150px; height: 150px;">
+                    <a href=""><img src="/img/Anivn.top_Horimiya.jpg" alt="">
+                    </a>
+                    <div class="slide-caption position-absolute px-3">
+                        <span class="fs-bold fs-7">
+                            <a href="#">
+                                Horimiya
+                            </a>
+                            <span class="fs-8">
+                                Chapter 32
+                            </span>
+                        </span>
+                    </div>
+                </li>
+                <li class="splide__slide position-relative" style="width: 150px; height: 150px;">
+                    <a href=""><img src="/img/bia-vol-17.thumb_500x.jpg" alt="">
+                    </a>
+                    <div class="slide-caption position-absolute px-3">
+                        <span class="fs-bold fs-7">
+                            <a href="#">
+                                Tonikaku Kawaii
+                            </a>
+                            <span class="fs-8">
+                                Chapter 12
+                            </span>
+                        </span>
+                    </div>
+                </li>
+                <li class="splide__slide position-relative" style="width: 150px; height: 150px;">
+                    <a href=""><img src="/img/Fuufu-Ijou, Koibito-Miman.png" alt="">
+                    </a>
+                    <div class="slide-caption position-absolute px-3">
+                        <span class="fs-bold fs-7">
+                            <a href="#">
+                                Fuufu Ijou, Koibito Miman
+                            </a>
+                            <span class="fs-8">
+                                Chapter 56
+                            </span>
+                        </span>
+                    </div>
+                </li>
+                <li class="splide__slide position-relative" style="width: 150px; height: 150px;">
+                    <a href=""><img src="/img/masamune_kun_no_revenge_after_school_1_2.jpg" alt="">
+                    </a>
+                    <div class="slide-caption position-absolute px-3">
+                        <span class="fs-bold fs-7">
+                            <a href="#">
+                                Masamune Kun No Revenge
+                            </a>
+                            <span class="fs-8">
+                                Chapter 60
+                            </span>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Carousel Section End -->
+
+    <!-- Product Section Begin -->
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="trending__product">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Nổi bật</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trend-1.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Romance</li>
+                                        </ul>
+                                        <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trend-2.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Romance</li>
+                                        </ul>
+                                        <h5><a href="#">Gintama 2: Kanketsu-hen - Yorozuya yo Eien</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trend-3.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Slice of life</li>
+                                        </ul>
+                                        <h5><a href="#">Shingeki no Kyojin Season 3 Part 2</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trend-4.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Manga</li>
+                                        </ul>
+                                        <h5><a href="#">Fullmetal Alchemist: Brotherhood</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trend-5.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Light novel</li>
+                                        </ul>
+                                        <h5><a href="#">Shiratorizawa Gakuen Koukou</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trend-6.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Light Novel</li>
+                                        </ul>
+                                        <h5><a href="#">Code Geass: Hangyaku no Lelouch R2</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent__product">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Truyện mới</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent-1.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Action</li>
+                                        </ul>
+                                        <h5><a href="#">Great Teacher Onizuka</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent-2.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Action</li>
+                                        </ul>
+                                        <h5><a href="#">Fate/stay night : Heaven's Feel - II. Lost</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent-3.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Josei</li>
+                                        </ul>
+                                        <h5><a href="#">Mushishi Zoku Shou: Suzu no Shizuku</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent-4.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Isekai</li>
+                                        </ul>
+                                        <h5><a href="#">Fate/Zero 2nd Season</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent-5.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Horror</li>
+                                        </ul>
+                                        <h5><a href="#">Kizumonogatari II: Nekket su-hen</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent-6.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Sci-fi</li>
+                                        </ul>
+                                        <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="product__sidebar">
+                        <div class="product__sidebar__view">
+                            <div class="section-title">
+                                <h5>Xem nhiều</h5>
+                            </div>
+                            <ul class="filter__controls">
+                                <li class="active" data-filter="*">Ngày</li>
+                                <li data-filter=".week">Tuần</li>
+                                <li data-filter=".month">Tháng</li>
+                                <li data-filter=".years">Năm</li>
+                            </ul>
+                            <div class="filter__gallery">
+                                <div class="product__sidebar__view__item set-bg mix day years"
+                                    data-setbg="img/tv-1.jpg">
+                                    <div class="ep">18 / ?</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <h5><a href="#">Boruto: Naruto next generations</a></h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg mix month week"
+                                    data-setbg="img/tv-2.jpg">
+                                    <div class="ep">18 / ?</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg mix week years"
+                                    data-setbg="img/tv-3.jpg">
+                                    <div class="ep">18 / ?</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <h5><a href="#">Sword art online alicization war of underworld</a></h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg mix years month"
+                                    data-setbg="img/tv-4.jpg">
+                                    <div class="ep">18 / ?</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <h5><a href="#">Fate/stay night: Heaven's Feel I. presage flower</a></h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg mix day" data-setbg="img/tv-5.jpg">
+                                    <div class="ep">18 / ?</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <h5><a href="#">Fate stay night unlimited blade works</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="live__product" style="padding-left: 15px; padding-right: 15px;">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-8">
+                            <div class="section-title">
+                                <h4>Tổng hợp</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-2.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>Shojo</li>
+                                    </ul>
+                                    <h5><a href="#">Shouwa Genroku Rakugo Shinjuu</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-2.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>Action</li>
+                                    </ul>
+                                    <h5><a href="#">Mushishi Zoku Shou 2nd Season</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-3.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>End</li>
+                                        <li>Action</li>
+                                    </ul>
+                                    <h5><a href="#">Mushishi Zoku Shou: Suzu no Shizuku</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-4.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>Shounen</li>
+                                    </ul>
+                                    <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-5.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>School life</li>
+                                        <li>Romance</li>
+                                    </ul>
+                                    <h5><a href="#">Fate/stay night : Heaven's Feel - II. Lost</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-6.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>Romance</li>
+                                    </ul>
+                                    <h5><a href="#">Kizumonogatari II: Nekketsu-hen</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-6.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>Romance</li>
+                                    </ul>
+                                    <h5><a href="#">Kizumonogatari II: Nekketsu-hen</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-6.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>Romance</li>
+                                    </ul>
+                                    <h5><a href="#">Kizumonogatari II: Nekketsu-hen</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-6.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>Romance</li>
+                                    </ul>
+                                    <h5><a href="#">Kizumonogatari II: Nekketsu-hen</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-6.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>Romance</li>
+                                    </ul>
+                                    <h5><a href="#">Kizumonogatari II: Nekketsu-hen</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-6.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>Romance</li>
+                                    </ul>
+                                    <h5><a href="#">Kizumonogatari II: Nekketsu-hen</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/live-6.jpg">
+                                    <div class="ep">18 / 18</div>
+                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                </div>
+                                <div class="product__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>Romance</li>
+                                    </ul>
+                                    <h5><a href="#">Kizumonogatari II: Nekketsu-hen</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="see-more">
+                        <div class="see-more-button">Xem thêm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="footer__logo">
+                        <a href="./index.html">
+                            <img src="/img/logo.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p style="color: aliceblue;">Mọi thông tin và hình ảnh trên website đều được sưu tầm trên Internet.
+                        Chúng tôi không sở hữu hay chịu trách nhiệm bất kỳ thông tin nào trên web này. Nếu làm ảnh hưởng
+                        đến cá nhân hay tổ chức nào, khi được yêu cầu, chúng tôi sẽ xem xét và gỡ bỏ ngay lập tức.</p>
+                </div>
+            </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>

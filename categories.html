@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thể Loại</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/dark.min.css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+        <div class="loader"></div>
+    </div> -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.svg" class="logo" alt="">
+                            <img src="img/logo_res.svg" class="logo_responsive" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Trang chủ</a></li>
+                                <li class="active"><a>Thể loại
+                                        <span class="arrow_carrot-down dropdown-icon"></span>
+                                    </a>
+                                    <ul class="dropdown">                                        
+                                        <div id="displayCategoryOnHeader">
+                                            <ul class="multi_column_dropdowmn">
+                                            </ul>
+                                        </div>                                        
+                                    </ul>
+                                </li>
+                                <li id="history"><a href="/history.html" id="history-btn">Lịch sử</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="search-bar row align-items-center">
+                            <div class="search-box me-1">
+                                <input type="text" name="search-input" id="search-content" style="width: 100%;"
+                                    class="input-search fs-8 fw-bolder" placeholder="Bạn cần tìm gì?">
+                            </div>
+                            <div class="search-submit">
+                                <button type="button" class="abc search-icon ms-5" id="search-icon">
+                                    <i class="fa fa-search" style="color: white; height: 23px;"></i>
+                                </button>
+                            </div>
+                            
+                            <div>
+                                <a href="login.html" id="indexViewButtonLogin"><span
+                                        class="icon_profile ms-4"></span></a>
+                                <div class="avatar position-relative ms-4" id="indexViewUserDetail"
+                                    style="display: none;">
+                                    <img src="" alt="avatar" class="avatar-img" id="avatar-sidebar">
+                                    <ul class="avatar-sidebar-list position-absolute unstyled" id="sideBarList">
+                                        <li>
+                                            <a href="/profile_info.html">
+                                                <i class="fa fa-user me-2" aria-hidden="true"></i>
+                                                <span class="fs-6">Tài khoản</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a onclick="logout()">
+                                                <i class="fa fa-sign-out me-2" aria-hidden="true"></i>
+                                                <span class="fs-6">Đăng xuất</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-bar-responsive row align-items-center justify-content-center">
+                <div class="search-box-responsive me-1 my-4">
+                    <input type="text" name="search-input" id="search-content-responsive" style="width: 100%;"
+                        class="input-search fs-8 fw-bolder" placeholder="Bạn cần tìm gì?">
+                </div>
+                <div class="search-submit-responsive">
+                    <button type="button" class="abc search-icon-responsive ms-5" id="search-icon-responsive">
+                        <i class="fa fa-search" style="color: white; height: 23px;"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Product Section Begin -->
+    <section class="product-page spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product__page__content">
+                        <div class="product__page__title">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="section-title">
+                                        <h4 id="categoryViewName"></h4>
+                                    </div>
+                                    <div class="title-detail my-6">
+                                        <span style="margin-left: 14px;" id="categoryViewDescription"></span>
+                                    </div>
+                                    <div class="d-flex flex-column list-categories my-6">
+                                        <div class="d-flex flex-row my-2">
+                                            <div class="col-4 col-lg-2" style="color: white;">Thể loại</div>
+                                            <div class="col-8 col-lg-10 cate-list">
+                                                <select id="choose-cate" onchange="searchConfigCategory()">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row my-2">
+                                            <div class="col-4 col-lg-2" style="color: white;">Tình trạng</div>
+                                            <div class="col-8 col-lg-10 status-list d-flex flex-wrap">
+                                                <a class="choose-status active cursor-pointer" id="categoryViewButtonStatusAll" onclick="searchConfigStatus('')">Tất cả</a>
+                                                <a class="choose-status cursor-pointer" id="categoryViewButtonStatusOnGoing" onclick="searchConfigStatus('1')">Đang tiến hành</a>
+                                                <a class="choose-status cursor-pointer" id="categoryViewButtonStatusFinished" onclick="searchConfigStatus('2')">Hoàn thành</a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row my-2">
+                                            <div class="col-4 col-lg-2" style="color: white;">Quốc gia</div>
+                                            <div class="col-8 col-lg-10 nation-list d-flex flex-wrap">
+                                                <a class="choose-nation active cursor-pointer" id="categoryViewButtonNationAll" onclick="searchConfigNation('')">Tất cả</a>
+                                                <a class="choose-nation cursor-pointer" id="categoryViewButtonNationJapan" onclick="searchConfigNation('2')">Nhật Bản</a>
+                                                <a class="choose-nation cursor-pointer" id="categoryViewButtonNationVietnam" onclick="searchConfigNation('1')">Việt Nam</a>
+                                                <a class="choose-nation cursor-pointer" id="categoryViewButtonNationChina" onclick="searchConfigNation('3')">Trung Quốc</a>
+                                                <a class="choose-nation cursor-pointer" id="categoryViewButtonNationKorea" onclick="searchConfigNation('4')">Hàn Quốc</a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row my-2">
+                                            <div class="col-4 col-lg-2" style="color: white;">Sắp xếp</div>
+                                            <div class="col-8 col-lg-10 sort">
+                                                <select id="sortViewCategory" onchange="searchConfigSort()">
+                                                    <option value="comic_view_desc">Lượt xem giảm dần</option>
+                                                    <option value="comic_view_asc">Lượt xem tăng dần</option>
+                                                    <option value="created_date_desc">Ngày đăng giảm dần</option>
+                                                    <option value="created_date_asc">Ngày đăng tăng dần</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="categoryViewComic">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Product Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p style="color: aliceblue;">Mọi thông tin và hình ảnh trên website đều được sưu tầm trên Internet. Chúng tôi không sở hữu hay chịu trách nhiệm bất kỳ thông tin nào trên web này. Nếu làm ảnh hưởng đến cá nhân hay tổ chức nào, khi được yêu cầu, chúng tôi sẽ xem xét và gỡ bỏ ngay lập tức.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/function.js"></script>
+
+</body>
+
+</html>
