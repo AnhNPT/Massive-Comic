@@ -797,24 +797,17 @@ function changePassword(currentPassword, oldP, newP, confirmP){
 
   let auth = getStore();
   console.log(currentPassword);
-  var newPasswordString = "tung";
-  let lengthNewP = document.getElementById("newP").length;
-  let lengthConfirmP = document.getElementById("confirmP").length;
+  var newPasswordString = "";
+  // let lengthNewP = document.getElementById("newP").length;
+  // let lengthConfirmP = document.getElementById("confirmP").length;
 
-  if (lengthNewP < 8 || lengthConfirmP < 8){
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Mật khẩu mới phải dài hơn 8 ký tự",
-  })
-  } else if (oldP == currentPassword){
-    newPasswordString = "(data: {password: \""+oldP+"\"})";
-  }
+  if (currentPassword == oldP && newP != oldP && newP == confirmP)
+    newPasswordString = "(data: {password: \""+newP+"\"})";
 
-  console.log(oldP);
+  console.log()
+  console.log(newP);
 
-  string = `
-  mutation {
+  string = `mutation {
     update_users_me `+newPasswordString+`{
           first_name
           last_name
@@ -823,12 +816,15 @@ function changePassword(currentPassword, oldP, newP, confirmP){
   }
   `
   console.log(string);
+  
+  if(auth){
+    let query = string;
+    queryGraphSystem(query, auth, function(json){
+    })
+  }
 
 }
 
-function resetPassword() {
-
-}
 
 // ========================================================================================================================================
 // Config
