@@ -627,7 +627,7 @@ function userToNavigation(json) {
     avatarSidebar.src = avatar;
   } else {
     let dummyAvatar =
-      "https://admin.vietdev.org/assets/9aaadd31-698f-4619-860f-a0ffd3e79daa.svg";
+      "http://localhost:8055/assets/9aaadd31-698f-4619-860f-a0ffd3e79daa.svg";
     let dummyAvatarSidebar = document.getElementById("avatar-sidebar");
     dummyAvatarSidebar.src = dummyAvatar;
   }
@@ -721,9 +721,9 @@ function profileInfo(userDetail){
 // Config
 function idToImageString(id) {
   if (id) {
-    return "https://admin.vietdev.org/assets/" + id;
+    return "http://localhost:8055/assets/" + id;
   }
-  // return "https://admin.vietdev.org/assets/415e18b2-1aa3-4f84-b2f9-12e0f2077860";
+  // return "https://..../assets/415e18b2-1aa3-4f84-b2f9-12e0f2077860";
 }
 
 //Output content

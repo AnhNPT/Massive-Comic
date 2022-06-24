@@ -224,13 +224,14 @@ function getUserDetail2() {
   let auth = getStore();
   if (auth) {
     queryApi("/users/me", "GET", null, auth, function (json) {
-      console.log(json);
+      // console.log(json);
       // handle(json);
       let user = json.data;
       var currentPassword = user.password;
       console.log(currentPassword);
       document.getElementById("save-change-password").onclick = function(){
         let oldP = document.getElementById("old-password").value;
+        console.log(oldP);
         let newP = document.getElementById("new-password").value;
         let confirmP = document.getElementById("retype-new-password").value;
         changePassword(currentPassword, oldP, newP, confirmP);
@@ -796,16 +797,12 @@ function getReadHistory(userID){
 function changePassword(currentPassword, oldP, newP, confirmP){
 
   let auth = getStore();
-  console.log(currentPassword);
   var newPasswordString = "";
-  // let lengthNewP = document.getElementById("newP").length;
-  // let lengthConfirmP = document.getElementById("confirmP").length;
 
-  if (currentPassword == oldP && newP != oldP && newP == confirmP)
+  if (currentPassword == oldP){
     newPasswordString = "(data: {password: \""+newP+"\"})";
-
-  console.log()
-  console.log(newP);
+    console.log(newP);
+  }
 
   string = `mutation {
     update_users_me `+newPasswordString+`{
@@ -816,13 +813,6 @@ function changePassword(currentPassword, oldP, newP, confirmP){
   }
   `
   console.log(string);
-  
-  if(auth){
-    let query = string;
-    queryGraphSystem(query, auth, function(json){
-    })
-  }
-
 }
 
 
@@ -908,7 +898,7 @@ function queryApi(router, method, data, auth, handle) {
 
   jQuery
     .ajax({
-      url: "https://admin.vietdev.org" + router,
+      url: "http://localhost:8055" + router,
       type: method,
       headers: headers,
       data: sendData,
@@ -939,7 +929,7 @@ function queryGraphql(query, auth, handle) {
   });
  
   jQuery.ajax({
-      url: "https://admin.vietdev.org/graphql",
+      url: "http://localhost:8055/graphql",
       type: "POST",
       headers: headers,
       data: data,
@@ -970,7 +960,7 @@ function queryGraphSystem(query, auth, handle) {
   });
  
   jQuery.ajax({
-      url: "https://admin.vietdev.org/graphql/system",
+      url: "http://localhost:8055/graphql/system",
       type: "POST",
       headers: headers,
       data: data,
@@ -1133,7 +1123,7 @@ function getComicDetail(comicId){
           users_id{
               id
           }
-      }
+        }
         comic_view
         comic_category{
             category_id{
@@ -1148,7 +1138,6 @@ function getComicDetail(comicId){
         }
       }
     }
-  
 `;
 }
 
@@ -1206,7 +1195,7 @@ query{
 }`
 }
 
-//Change username
+//Change username//
 function changeUserName(currentFirstName, currentLastName){
 
   var newUserNameString;  
@@ -1257,7 +1246,6 @@ function changeUserName(currentFirstName, currentLastName){
     }).then((result) => {
       location.reload();
     })
-
 }
 
 //Upload Avatar
@@ -1319,9 +1307,9 @@ function getPathName(){
   let mainPath = window.location.href;
   let domain1 = "http://127.0.0.1:5500/";
   let domain2 = "http://127.0.0.1:5501/";
-  let domain3 = "https://vietdev.org/";
+  // let domain3 = "https://vietdev.org/";
   var file = mainPath.replace(domain1, "");
   file = file.replace(domain2, "");
-  file = file.replace(domain3, "")
+  // file = file.replace(domain3, "")
   return file;
 }
