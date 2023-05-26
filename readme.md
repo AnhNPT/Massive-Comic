@@ -1,14 +1,9 @@
-<!-- Chạy chương trình -->
-Mở folder bằng visual studio code.
-Cài đặt extension live server.
-Chuột phải vào file index.html -> Open with live server.
+Open the folder in Visual Studio Code. Install the Live Server extension. Right-click on the index.html file and select "Open with Live Server".
 
-<!-- Lỗi sai đường dẫn -->
-Vì mỗi máy chạy live server thì sẽ chạy trên đường dẫn và port khác nhau nên khi chạy hãy xem lại đường dẫn của local. Nếu sai thì tiến hành fix như sau:
+Since each machine running Live Server will have a different path and port, please check the local path when running. If it's incorrect, follow these steps to fix it:
 
-Mở file junction.js (folder js), kéo xuống cuối cùng có hàm getPathName()
-Thay đổi domain có sẵn thành domain trên trình duyệt của mình 
+Open the junction.js file (inside the js folder) and scroll down to the end where you will find the getPathName() function. Change the existing domain to match your browser's domain.
 
-Vd: Chạy local với domain http://127.0.0.1:8080/ thì thay đổi từ http://127.0.0.1:5500/ thành http://127.0.0.1:8080/ (phải có dấu "/" ở cuối)
+For example, if you're running locally with the domain http://127.0.0.1:8080/, then change http://127.0.0.1:5500/ to http://127.0.0.1:8080/ (make sure to include the trailing "/").
 
-Save và F5 lại trình duyệt.
+Save the file and refresh your browser (press F5).
